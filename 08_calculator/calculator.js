@@ -7,16 +7,19 @@ const subtract = function(a, b) {
 	
 };
 
-const sum = function(...args) {
+const sum = function(args) {
   let sum = 0;
+
   for (let i = 0; i < args.length; i++) {
-    sum += args[i];
+    if(typeof args[i] === "number") {
+      sum += args[i];
+    }
   }
   return sum;
   
 };
 
-const multiply = function(...args) {
+const multiply = function(args) {
   let a = 1;
   for (let i = 0; i < args.length; i++) {
     a *= args[i];
@@ -25,7 +28,7 @@ const multiply = function(...args) {
 };
 
 const power = function(a, p) {
-  return a ^ p;
+  return a ** p;
 	
 };
 
